@@ -1,10 +1,499 @@
-.App {
+.body-login {
+  background-image: url("Final.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.body-game {
+  background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/lanecounty/temp_af4f94d8-438d-4894-94de-7c0672c99834.jpg");
+  background-size: cover;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-feedback {
+  background-image: url("trivison-game.png");
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.li-ranking {
+  padding-left: 10%;
+  padding-right: 12%;
+  background-color: rgba(204, 185, 185, 0.623);
+  list-style: none;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#title-ranking {
+  margin-top: 0px;
+  padding-top: 70px;
+}
+
+.body-ranking {
+  background-color: #f0ec21;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.body-settings {
+  background-image: url("Final.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.cross_line {
+  background-color: #ec92ec;
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  text-decoration: none;
+  font-weight: bold;
+  color: #814003;
+  margin-left: 3px;
+}
+.cross_line:before,
+.cross_line:after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+  transition: 0.3s;
+}
+.cross_line:before {
+  left: 7px;
+}
+.cross_line:after {
+  right: 7px;
+}
+.cross_line:hover:before {
+  top: 0px;
+  left: 0;
+  height: 100%;
+}
+.cross_line:hover:after {
+  top: 0px;
+  right: 0;
+  height: 100%;
+}
+
+.header {
+  align-items: center;
+  background-color: rgba(243, 227, 8, 0.863);
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.name-header {
+  color: #e02de0;
+  font-family: "Ultra", sans-serif;
+  font-weight: normal;
+  font-size: 26px;
+  margin: 1em 0 0.5em 0;
+  text-transform: uppercase;
+  text-shadow: 0 2px rgb(138, 85, 17), 0 4px rgb(138, 93, 41);
+}
+
+.score-header {
+  color: #e02de0;
+  font-family: "Ultra", sans-serif;
+  font-weight: normal;
+  margin: 1em 0 0.5em 0;
+  padding: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px rgb(138, 85, 17), 0 1px rgb(138, 93, 41);
+  border: 2px solid;
+  border-color: rgb(175, 85, 21);
+}
+
+.questions {
+  align-items: center;
+  font-family: "Ultra", sans-serif;
+  font-size: 20px;
+  background-color: rgba(243, 227, 8, 0.678);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  height: 300px;
+}
+
+.question-container {
+  padding: ;
+}
+
+.feedback-container {
+  color: #e02de0;
+  text-shadow: 0 2px rgb(138, 85, 17), 0 1px rgb(138, 93, 41);
+  align-items: center;
+  font-family: "Ultra", sans-serif;
+  font-size: 20px;
+  background-color: rgba(243, 227, 8, 0.829);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 250px;
+  margin-left: 10%;
+  margin-right: 60%;
+  padding: 20px;
+  height: 300px;
+}
+
+.cta {
+  display: flex;
+  padding: 5px 25px;
+  text-decoration: solid;
+  font-family: "Ultra", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(102, 60, 6);
+  background: rgb(226, 95, 176);
+  transition: 1s;
+  box-shadow: 6px 6px 0 rgb(143, 61, 6);
+  transform: skewX(-15deg);
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
+}
+
+.img-game {
+  bottom: 0px;
+  height: 400px;
+  position: absolute;
+  right: 0px;
+}
+
+.login-form {
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  left: 27%;
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background: transparent;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 0 5px 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.959);
+}
+
+.input-container input:focus {
+  border: none;
+  border-bottom: 1px solid #9f31e7;
+  outline: none;
+}
+
+.one {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 6px 30px 6px 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+  color: rgb(121, 18, 168);
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
+  background-size: 110%;
+  font-family: "Oswald", sans-serif;
+}
+.one:hover {
+  background-position: 0% 40%;
+}
+.one:hover:after {
+  right: -40px;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
+}
+.one:before,
+.two:before,
+.one:after,
+.two:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.one:before,
+.two:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 19px;
+}
+.one:after,
+.two:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
+  font-size: 100px;
+  opacity: 0.3;
+  right: -120px;
+  top: -17px;
+}
+.one {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #782cda;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#782cda),
+      to(rgba(126, 94, 162, 0.51))
+    ),
+    url("https://cdn.vox-cdn.com/thumbor/FbNEU3NsboVkmUTZfSdVeWYWgt4=/0x0:939x704/1400x1050/filters:focal(0x0:939x704):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/49610677/homersimpson.0.0.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      #c9da2c,
+      rgba(162, 157, 94, 0.51)
+    ),
+    url("https://cdn.vox-cdn.com/thumbor/FbNEU3NsboVkmUTZfSdVeWYWgt4=/0x0:939x704/1400x1050/filters:focal(0x0:939x704):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/49610677/homersimpson.0.0.jpg");
+}
+.one:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
+}
+.one:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.one:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.one:after,
+.one:before {
+  content: "";
+}
+.one b {
+  color: #dda6ff;
+  font-weight: 700;
+}
+
+.two {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 6px 40px 6px 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+  color: rgb(121, 18, 168);
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
+  background-size: 110%;
+  font-family: "Oswald", sans-serif;
+}
+.two:hover,
+.two:hover {
+  background-position: 0% 60%;
+}
+.two:hover:after {
+  right: -40px;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
+}
+
+.two:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 19px;
+}
+.two:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
+  font-size: 100px;
+  opacity: 0.3;
+  right: -120px;
+  top: -17px;
+}
+
+.two {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #782cda;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#782cda),
+      to(rgba(126, 94, 162, 0.51))
+    ),
+    url("https://www.culturamix.com/wp-content/gallery/homer-3/homer_at_work_by_fullmetal870-d8041vg.png");
+  background-image: linear-gradient(
+      to bottom,
+      #c9da2c,
+      rgba(162, 157, 94, 0.51)
+    ),
+    url("https://www.culturamix.com/wp-content/gallery/homer-3/homer_at_work_by_fullmetal870-d8041vg.png");
+}
+.two:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
+}
+.two:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.two:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.two:after,
+.two:before {
+  content: "";
+}
+.two b {
+  color: #dda6ff;
+  font-weight: 700;
+}
+
+.three {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 6px 30px 6px 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  width: 20px;
+  position: relative;
+  color: rgb(121, 18, 168);
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
+  background-size: 110%;
+  font-family: "Oswald", sans-serif;
+}
+.three:hover {
+  background-position: 0% 48%;
+}
+.three:hover:after {
+  right: -40px;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
+}
+.three:before,
+.two:before,
+.three:after,
+.two:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.three:before,
+.two:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 19px;
+}
+.three:after,
+.two:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
+  font-size: 100px;
+  opacity: 0.3;
+  right: -120px;
+  top: -17px;
+}
+.three {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #782cda;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#782cda),
+      to(rgba(126, 94, 162, 0.51))
+    ),
+    url("https://i.pinimg.com/236x/23/e2/e2/23e2e2686e12f3574ccff126fdf9e64d--cartoon-disney-bart-simpson.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      #c9da2c,
+      rgba(162, 157, 94, 0.51)
+    ),
+    url("https://i.pinimg.com/236x/23/e2/e2/23e2e2686e12f3574ccff126fdf9e64d--cartoon-disney-bart-simpson.jpg");
+}
+.three:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
+}
+.three:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.three:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.three:after,
+.three:before {
+  content: "";
+}
+.three b {
+  color: #dda6ff;
+  font-weight: 700;
+}
+
+.button-ranking {
+  width: 200px;
+  text-align: center;
+  margin-left: 45%;
 }
 
 .red-border {
@@ -15,43 +504,41 @@
   border: 1px solid green;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: shake infinite 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  }
-}
-
-.App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes shake {
+.correct-answer {
+  border: 3px solid rgb(6, 240, 15);
+  margin-left: 3px;
+  margin-right: 3px;
+}
 
-  10%, 90% {
+[class|="wrong"] {
+  border: 3px solid red;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
 
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
